@@ -18,8 +18,8 @@ body{
 	margin-top: 1%;
 }
 .botonPublicar,.botonPublicarCita,.botonPublicarMeme,.botonPublicarNota,.botonPublicarCita{
-	background-color: #56A540;
-	padding: 8px 13px;
+	background-color: #58ACFA;
+	padding: 8px 10px;
 	border-radius:5px;
 	border:none;
 	border-bottom: 1px solid #088A08 ;
@@ -34,8 +34,8 @@ body{
  	width: 35%;
 }
 .botonEliminar,.botonEliminarCita,.botonEliminarMeme,.botonEliminarNota,.botonCambiarColor{
-	background-color: #56A540;
-	padding: 8px 13px;
+	background-color: #58ACFA;
+	padding: 8px 10px;
 	border-radius:5px;
 	border:none;
 	border-bottom: 1px solid #088A08 ;

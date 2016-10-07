@@ -23,7 +23,6 @@ window.addEventListener("load",function(){
 		crearContenidoNota();
 	});
 	
-
 	function crearContenidoTexto(){
 		var inputTitulo = document.createElement("input");
 		var textareaTexto = document.createElement("textarea");
@@ -60,7 +59,6 @@ window.addEventListener("load",function(){
 			this.parentElement.remove();
         });
     }
-	
 	function crearContenidoCita(){
 		var inputCita = document.createElement("input");
 		var textareaCita = document.createElement("textarea");
@@ -207,7 +205,7 @@ window.addEventListener("load",function(){
 		botonEliminarPost.addEventListener("click", function(){
         	this.parentElement.remove();
         });
-}
+    }
 	function crearPostCita(textareaCita, inputCita){
 		var postCita = document.createElement("div");
 		var tituloCita = document.createElement("h2");
@@ -232,7 +230,6 @@ window.addEventListener("load",function(){
 		botonEliminarPost.addEventListener("click", function(){
         	this.parentElement.remove();
         });
-
 	}
 });
 
