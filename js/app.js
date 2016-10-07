@@ -62,8 +62,6 @@ window.addEventListener("load",function(){
     }
 	
 	function crearContenidoCita(){
-		//var cambiarDisplay = document.querySelector(".contenedorTexto");
-		//cambiarDisplay.style.display = "none";
 		var inputCita = document.createElement("input");
 		var textareaCita = document.createElement("textarea");
 		var botonPublicarCita = document.createElement("button");
@@ -83,8 +81,8 @@ window.addEventListener("load",function(){
 		textareaCita.rows = "6";
 		inputCita.placeholder = "Autor...";
 
-		contenedorCita.insertBefore(inputCita,contenedorCita.childNodes[0]);
-		contenedorCita.insertBefore(textareaCita,contenedorCita.childNodes[1]);
+		contenedorCita.insertBefore(textareaCita,contenedorCita.childNodes[0]);
+		contenedorCita.insertBefore(inputCita,contenedorCita.childNodes[1]);
 		contenedorCita.insertBefore(botonEliminarCita,contenedorCita.childNodes[2]);
 		contenedorCita.insertBefore(botonPublicarCita,contenedorCita.childNodes[3]);
         contenedor.appendChild(contenedorCita);
@@ -93,7 +91,7 @@ window.addEventListener("load",function(){
         	this.parentElement.remove();
         });
         botonPublicarCita.addEventListener("click",function(){
-        	crearPostCita(textareaCita, inputCita);
+        	crearPostCita(inputCita,textareaCita);
         	textareaCita.value = "";
         	inputCita.value = "";
 			this.parentElement.remove();
@@ -129,8 +127,8 @@ window.addEventListener("load",function(){
         	this.parentElement.remove();
         });
          botonPublicarMeme.addEventListener("click",function(){
-        	crearPostMeme(textareaMeme, inputMeme);
-        	
+        	this.parentElement.remove();
+        	crearPostMeme(inputMeme.value);
         });
 	}
 	function crearContenidoNota(){
@@ -191,27 +189,20 @@ window.addEventListener("load",function(){
 		botonEliminarPost.addEventListener("click", function(){
         	this.parentElement.remove();
         });
-
 	}
-	function crearPostMeme(){
+	function crearPostMeme(meme){
 		var postMeme = document.createElement("div");
-		var linkMeme = document.createElement("input");
 		var parrafoMeme = document.createElement("img");
 		var botonEliminarPost = document.createElement("button")
-		var contenedorMeme = document.createElement("div");
 
-		parrafoMeme.setAttribute("src",linkMeme.value);
+		parrafoMeme.setAttribute("src",meme);
 		postMeme.classList.add("postMeme");
-		linkMeme.classList.add("linkMeme");
 		parrafoMeme.classList.add("parrafoMeme");
 		botonEliminarPost.classList.add("botonEliminarPost");
 		botonEliminarPost.textContent ="Eliminar";
 
 		box.insertBefore(postMeme,box.childNodes[0]);
-		postMeme.insertBefore(linkMeme,postMeme.childNodes[1]);
-		postMeme.insertBefore(parrafoMeme,postMeme.childNodes[2]);
-		postMeme.insertBefore(botonEliminarPost,postMeme.childNodes[3]);
-		contenedorMeme.appendChild(postMeme);
+		postMeme.insertBefore(parrafoMeme,postMeme.childNodes[1]);
 
 		botonEliminarPost.addEventListener("click", function(){
         	this.parentElement.remove();

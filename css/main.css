@@ -4,7 +4,7 @@
 
 body{
 	
-	background-image: url(../img/fondo.png);
+	background-image: url(../img/imagen.png);
 	background-repeat: no-repeat;
 	background-size: cover;
 	}
@@ -31,7 +31,7 @@ body{
 .contenedorTexto,.contenedorCita,.contenedorMeme,.contenedorNota,.postText,.postCita{
  	border: 3px solid gray; 
  	margin: 2% ; 
- 	width: 50%;
+ 	width: 35%;
 }
 .botonEliminar,.botonEliminarCita,.botonEliminarMeme,.botonEliminarNota,.botonCambiarColor{
 	background-color: #56A540;
@@ -71,15 +71,29 @@ body{
 
 }
 .parrafoText,.parrafoCita{
-	color: #E6E6E6;
+	color: #08298A;
 	font-weight :bold;
 	font-family: monospace;
+	font-size: 25px;
 }
 
 .tittle{
-	color:#fff;
+	color:#01A9DB;
 	font-weight :bold;
 	font-family: monospace;
 	margin-top: 2%;
 	margin-left: 2%;
+}
+
+.inputCita{
+margin-bottom: 8px;
+}
+.botonEliminarPost{
+	margin-bottom: 1%;
+}
+
+img{
+	margin-top: 4%;
+	margin-left: 3%
+	border: 1% solid red;
 }
