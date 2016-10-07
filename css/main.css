@@ -1,0 +1,85 @@
+
+
+
+
+body{
+	
+	background-image: url(../img/fondo.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	}
+
+.inputTitulo,.inputCita,.inputMeme,.inputNota,.tituloText{
+	width:100%;
+	margin-top: 2%;
+}
+.textareaTexto,.textCita,.textMeme,.textNota,.parrafoText{
+	width:100%;
+	margin-top: 1%;
+}
+.botonPublicar,.botonPublicarCita,.botonPublicarMeme,.botonPublicarNota{
+	background-color: #56A540;
+	padding: 8px 13px;
+	border-radius:5px;
+	border:none;
+	border-bottom: 1px solid #088A08 ;
+	color:white;
+	font-weight :bold;
+	font-size: 15px;
+	margin-left: 3%;
+}
+.contenedorTexto,.contenedorCita,.contenedorMeme,.contenedorNota,.postText{
+ 	border: 3px solid gray; 
+ 	margin: 2% ; 
+ 	width: 50%;
+}
+.botonEliminar,.botonEliminarCita,.botonEliminarMeme,.botonEliminarNota,.botonCambiarColor{
+	background-color: #56A540;
+	padding: 8px 13px;
+	border-radius:5px;
+	border:none;
+	border-bottom: 1px solid #088A08 ;
+	color:white;
+	font-weight :bold;
+	font-size: 15px;
+	margin-left: 3%;
+
+}
+.box{
+	word-wrap: break-word;
+	margin-left: 7%;
+}
+
+.botonEliminarPost{
+	background-color: red;
+	padding: 5px 6px;
+	border-radius:5px;
+	border:none;
+	border-bottom: 1px solid #088A08 ;
+	color:white;
+	font-weight :bold;
+	font-size: 9px;
+	margin-top: 1px;
+}
+.postTexto{
+
+}
+.tituloText{
+	color:#2E2E2E;
+	font-weight :bold;
+	font-family: monospace;
+
+}
+.parrafoText{
+	color: #E6E6E6;
+	font-weight :bold;
+	font-family: monospace;
+}
+
+.tittle{
+	color:#fff;
+	font-weight :bold;
+	font-family: monospace;
+	margin-top: 2%;
+	margin-left: 2%;
+}
