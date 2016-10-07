@@ -9,15 +9,15 @@ body{
 	background-size: cover;
 	}
 
-.inputTitulo,.inputCita,.inputMeme,.inputNota,.tituloText{
+.inputTitulo,.inputCita,.inputMeme,.inputNota,.tituloText,.tituloCita{
 	width:100%;
 	margin-top: 2%;
 }
-.textareaTexto,.textCita,.textMeme,.textNota,.parrafoText{
+.textareaTexto,.textCita,.textMeme,.textNota,.parrafoText,.parrafoCita{
 	width:100%;
 	margin-top: 1%;
 }
-.botonPublicar,.botonPublicarCita,.botonPublicarMeme,.botonPublicarNota{
+.botonPublicar,.botonPublicarCita,.botonPublicarMeme,.botonPublicarNota,.botonPublicarCita{
 	background-color: #56A540;
 	padding: 8px 13px;
 	border-radius:5px;
@@ -28,7 +28,7 @@ body{
 	font-size: 15px;
 	margin-left: 3%;
 }
-.contenedorTexto,.contenedorCita,.contenedorMeme,.contenedorNota,.postText{
+.contenedorTexto,.contenedorCita,.contenedorMeme,.contenedorNota,.postText,.postCita{
  	border: 3px solid gray; 
  	margin: 2% ; 
  	width: 50%;
@@ -64,13 +64,13 @@ body{
 .postTexto{
 
 }
-.tituloText{
+.tituloText,.tituloCita{
 	color:#2E2E2E;
 	font-weight :bold;
 	font-family: monospace;
 
 }
-.parrafoText{
+.parrafoText,.parrafoCita{
 	color: #E6E6E6;
 	font-weight :bold;
 	font-family: monospace;

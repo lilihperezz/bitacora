@@ -62,8 +62,8 @@ window.addEventListener("load",function(){
     }
 	
 	function crearContenidoCita(){
-		var cambiarDisplay = document.querySelector(".contenedorTexto");
-		cambiarDisplay.style.display = "none";
+		//var cambiarDisplay = document.querySelector(".contenedorTexto");
+		//cambiarDisplay.style.display = "none";
 		var inputCita = document.createElement("input");
 		var textareaCita = document.createElement("textarea");
 		var botonPublicarCita = document.createElement("button");
@@ -91,6 +91,12 @@ window.addEventListener("load",function(){
 
         botonEliminarCita.addEventListener("click", function(){
         	this.parentElement.remove();
+        });
+        botonPublicarCita.addEventListener("click",function(){
+        	crearPostCita(textareaCita, inputCita);
+        	textareaCita.value = "";
+        	inputCita.value = "";
+			this.parentElement.remove();
         });
 	}
 	function crearContenidoMeme(){
@@ -121,6 +127,10 @@ window.addEventListener("load",function(){
 
         botonEliminarMeme.addEventListener("click", function(){
         	this.parentElement.remove();
+        });
+         botonPublicarMeme.addEventListener("click",function(){
+        	crearPostMeme(textareaMeme, inputMeme);
+        	
         });
 	}
 	function crearContenidoNota(){
@@ -177,6 +187,56 @@ window.addEventListener("load",function(){
 
 		tituloText.innerText = input.value;
 		parrafoText.innerText = textareaTexto.value;
+
+		botonEliminarPost.addEventListener("click", function(){
+        	this.parentElement.remove();
+        });
+
+	}
+	function crearPostMeme(){
+		var postMeme = document.createElement("div");
+		var linkMeme = document.createElement("input");
+		var parrafoMeme = document.createElement("img");
+		var botonEliminarPost = document.createElement("button")
+		var contenedorMeme = document.createElement("div");
+
+		parrafoMeme.setAttribute("src",linkMeme.value);
+		postMeme.classList.add("postMeme");
+		linkMeme.classList.add("linkMeme");
+		parrafoMeme.classList.add("parrafoMeme");
+		botonEliminarPost.classList.add("botonEliminarPost");
+		botonEliminarPost.textContent ="Eliminar";
+
+		box.insertBefore(postMeme,box.childNodes[0]);
+		postMeme.insertBefore(linkMeme,postMeme.childNodes[1]);
+		postMeme.insertBefore(parrafoMeme,postMeme.childNodes[2]);
+		postMeme.insertBefore(botonEliminarPost,postMeme.childNodes[3]);
+		contenedorMeme.appendChild(postMeme);
+
+		botonEliminarPost.addEventListener("click", function(){
+        	this.parentElement.remove();
+        });
+}
+	function crearPostCita(textareaCita, inputCita){
+		var postCita = document.createElement("div");
+		var tituloCita = document.createElement("h2");
+		var parrafoCita = document.createElement("p");
+		var botonEliminarPost = document.createElement("button")
+
+		postCita.classList.add("postCita");
+		tituloCita.classList.add("tituloCita");
+		parrafoCita.classList.add("parrafoCita");
+		botonEliminarPost.classList.add("botonEliminarPost");
+
+		botonEliminarPost.textContent ="Eliminar";
+
+		box.insertBefore(postCita,box.childNodes[0]);
+		postCita.insertBefore(tituloCita,postCita.childNodes[1]);
+		postCita.insertBefore(parrafoCita,postCita.childNodes[2]);
+		postCita.insertBefore(botonEliminarPost,postCita.childNodes[3]);
+
+		tituloCita.innerText = inputCita.value;
+		parrafoCita.innerText = textareaCita.value;
 
 		botonEliminarPost.addEventListener("click", function(){
         	this.parentElement.remove();
