@@ -60,6 +60,7 @@ body{
 	font-weight :bold;
 	font-size: 9px;
 	margin-top: 1px;
+	margin-left: 1%;
 }
 .postTexto{
 
@@ -75,6 +76,8 @@ body{
 	font-weight :bold;
 	font-family: monospace;
 	font-size: 25px;
+	margin-left: 1%;
+
 }
 
 .tittle{
@@ -87,6 +90,11 @@ body{
 
 .inputCita{
 margin-bottom: 8px;
+
+}
+.inputText{
+margin-bottom: 8px;
+margin-left: 1%;
 }
 .botonEliminarPost{
 	margin-bottom: 1%;
