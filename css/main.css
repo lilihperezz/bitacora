@@ -1,7 +1,4 @@
 
-
-
-
 body{
 	
 	background-image: url(../img/imagen.png);
@@ -28,7 +25,7 @@ body{
 	font-size: 15px;
 	margin-left: 3%;
 }
-.contenedorTexto,.contenedorCita,.contenedorMeme,.contenedorNota,.postText,.postCita{
+.contenedorTexto,.contenedorCita,.contenedorMeme,.contenedorNota,.postText,.postCita,.postNota{
  	border: 3px solid gray; 
  	margin: 2% ; 
  	width: 35%;
@@ -62,22 +59,19 @@ body{
 	margin-top: 1px;
 	margin-left: 1%;
 }
-.postTexto{
-
-}
-.tituloText,.tituloCita{
+.tituloText,.tituloCita,.tituloNota{
 	color:#2E2E2E;
 	font-weight :bold;
 	font-family: monospace;
+	margin-left: 1%;
 
 }
-.parrafoText,.parrafoCita{
+.parrafoText,.parrafoCita.parrafoNota{
 	color: #08298A;
 	font-weight :bold;
 	font-family: monospace;
 	font-size: 25px;
 	margin-left: 1%;
-
 }
 
 .tittle{
@@ -89,19 +83,20 @@ body{
 }
 
 .inputCita{
-margin-bottom: 8px;
-
+	margin-bottom: 8px;
 }
 .inputText{
-margin-bottom: 8px;
-margin-left: 1%;
+	margin-bottom: 8px;
+	margin-left: 1%;
 }
 .botonEliminarPost{
 	margin-bottom: 1%;
 }
-
-img{
-	margin-top: 4%;
-	margin-left: 3%
-	border: 1% solid red;
+.horaText,.horaCita,.horaMeme,.horaNota{
+	margin-left: 55%;
+	color: #424242;
+}
+.parrafoMeme{
+	margin-top: 2%;
+	border: 2px solid gray;
 }

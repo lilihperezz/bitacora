@@ -1,3 +1,4 @@
+
 window.addEventListener("load",function(){
 	var botonTexto = document.getElementById("texto");
 	var botonCita = document.getElementById("cita");
@@ -162,24 +163,35 @@ window.addEventListener("load",function(){
         botonEliminarNota.addEventListener("click", function(){
         	this.parentElement.remove();
         });
+        botonPublicarNota.addEventListener("click",function(){
+        	crearPostNota(inputNota,textareaNota);
+        	textareaNota.value = "";
+        	inputNota.value = "";
+			this.parentElement.remove();
+        });
 	}
 	function crearPost(textareaTexto, input){
 		var postText = document.createElement("div");
 		var tituloText = document.createElement("h2");
 		var parrafoText = document.createElement("p");
-		var botonEliminarPost = document.createElement("button")
+		var botonEliminarPost = document.createElement("button");
+		var horaText = document.createElement("div");
+		var horaPublicacion = fechaPub();
 
 		postText.classList.add("postText");
 		tituloText.classList.add("tituloText");
 		parrafoText.classList.add("parrafoText");
 		botonEliminarPost.classList.add("botonEliminarPost");
+		horaText.classList.add("horaText");
 
 		botonEliminarPost.textContent ="Eliminar";
+		horaText.textContent = horaPublicacion;
 
 		box.insertBefore(postText,box.childNodes[0]);
 		postText.insertBefore(tituloText,postText.childNodes[1]);
 		postText.insertBefore(parrafoText,postText.childNodes[2]);
-		postText.insertBefore(botonEliminarPost,postText.childNodes[3]);
+		postText.insertBefore(horaText,postText.childNodes[3]);
+		postText.insertBefore(botonEliminarPost,postText.childNodes[4]);
 
 		tituloText.innerText = input.value;
 		parrafoText.innerText = textareaTexto.value;
@@ -192,6 +204,11 @@ window.addEventListener("load",function(){
 		var postMeme = document.createElement("div");
 		var parrafoMeme = document.createElement("img");
 		var botonEliminarPost = document.createElement("button")
+		var horaMeme = document.createElement("div");
+		var horaPublicacion = fechaPub();
+
+		botonEliminarPost.textContent ="Eliminar";
+		horaMeme.textContent = horaPublicacion;
 
 		parrafoMeme.setAttribute("src",meme);
 		postMeme.classList.add("postMeme");
@@ -201,6 +218,8 @@ window.addEventListener("load",function(){
 
 		box.insertBefore(postMeme,box.childNodes[0]);
 		postMeme.insertBefore(parrafoMeme,postMeme.childNodes[1]);
+		postMeme.insertBefore(horaMeme,postMeme.childNodes[3]);
+		postMeme.insertBefore(botonEliminarPost,postMeme.childNodes[4]);
 
 		botonEliminarPost.addEventListener("click", function(){
         	this.parentElement.remove();
@@ -210,7 +229,9 @@ window.addEventListener("load",function(){
 		var postCita = document.createElement("div");
 		var tituloCita = document.createElement("h2");
 		var parrafoCita = document.createElement("p");
-		var botonEliminarPost = document.createElement("button")
+		var botonEliminarPost = document.createElement("button");
+		var horaCita = document.createElement("div");
+		var horaPublicacion = fechaPub();
 
 		postCita.classList.add("postCita");
 		tituloCita.classList.add("tituloCita");
@@ -218,11 +239,13 @@ window.addEventListener("load",function(){
 		botonEliminarPost.classList.add("botonEliminarPost");
 
 		botonEliminarPost.textContent ="Eliminar";
+		horaCita.textContent = horaPublicacion;
 
 		box.insertBefore(postCita,box.childNodes[0]);
 		postCita.insertBefore(tituloCita,postCita.childNodes[1]);
 		postCita.insertBefore(parrafoCita,postCita.childNodes[2]);
-		postCita.insertBefore(botonEliminarPost,postCita.childNodes[3]);
+		postCita.insertBefore(horaCita,postCita.childNodes[3]);
+		postCita.insertBefore(botonEliminarPost,postCita.childNodes[4]);
 
 		tituloCita.innerText = inputCita.value;
 		parrafoCita.innerText = textareaCita.value;
@@ -231,6 +254,44 @@ window.addEventListener("load",function(){
         	this.parentElement.remove();
         });
 	}
+	function crearPostNota(textareaNota, inputNota){
+		var postNota = document.createElement("div");
+		var tituloNota = document.createElement("h2");
+		var parrafoNota = document.createElement("p");
+		var botonEliminarPost = document.createElement("button")
+		var horaNota = document.createElement("div");
+		var horaPublicacion = fechaPub();
+
+		postNota.classList.add("postNota");
+		tituloNota.classList.add("tituloNota");
+		parrafoNota.classList.add("parrafoNota");
+		botonEliminarPost.classList.add("botonEliminarPost");
+
+		botonEliminarPost.textContent ="Eliminar";
+		horaNota.textContent = horaPublicacion;
+
+		box.insertBefore(postNota,box.childNodes[0]);
+		postNota.insertBefore(tituloNota,postNota.childNodes[1]);
+		postNota.insertBefore(parrafoNota,postNota.childNodes[2]);
+		postNota.insertBefore(horaNota,postNota.childNodes[3]);
+		postNota.insertBefore(botonEliminarPost,postNota.childNodes[4]);
+
+		tituloNota.innerText = inputNota.value;
+		parrafoNota.innerText = textareaNota.value;
+
+		botonEliminarPost.addEventListener("click", function(){
+        	this.parentElement.remove();
+        });
+	}
+	function fechaPub(){
+		var fecha = new Date();
+        var hora = fecha.getHours();
+        var minuto = fecha.getMinutes();
+        var segundo = fecha.getSeconds();
+        var año = fecha.getFullYear();
+        return "Hora de post: " + hora + ":" + minuto + ":" + segundo + " - "+año;
+	}
 });
+
 
 
